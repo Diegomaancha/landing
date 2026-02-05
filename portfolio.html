@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio · Diego</title>
+
+    <style>
+        :root {
+            --bg: #020617;
+            --card: rgba(2, 6, 23, .72);
+            --stroke: rgba(148, 163, 184, .18);
+            --text: #e2e8f0;
+            --muted: #94a3b8;
+            --accent: #38bdf8;
+            --radius: 18px;
+            --shadow: 0 24px 70px rgba(0, 0, 0, .55);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+            background: radial-gradient(1200px 800px at 20% 20%, rgba(56, 189, 248, .10), transparent 55%),
+                linear-gradient(135deg, #0b1226, var(--bg));
+            color: var(--text);
+            min-height: 100vh;
+            padding: 36px 18px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 14px;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            letter-spacing: -.02em;
+        }
+
+        p {
+            color: rgba(226, 232, 240, .88);
+            line-height: 1.7;
+            margin-top: 8px;
+            max-width: 70ch;
+        }
+
+        .top-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 12px;
+            border-radius: 12px;
+            border: 1px solid var(--stroke);
+            text-decoration: none;
+            color: rgba(226, 232, 240, .95);
+            background: rgba(2, 6, 23, .25);
+            font-weight: 750;
+            transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+            user-select: none;
+            -webkit-user-select: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+            border-color: rgba(56, 189, 248, .45);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, .28);
+        }
+
+        .grid {
+            margin-top: 18px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--stroke);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 18px;
+        }
+
+        .card h2 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .meta {
+            color: var(--muted);
+            font-size: .92rem;
+            margin-bottom: 10px;
+        }
+
+        .links {
+            margin-top: 12px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 750;
+        }
+
+        .link:hover {
+            text-decoration: underline;
+        }
+
+        .tagrow {
+            margin-top: 10px;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            font-size: .82rem;
+            color: rgba(226, 232, 240, .9);
+            border: 1px solid rgba(148, 163, 184, .22);
+            background: rgba(2, 6, 23, .30);
+            padding: 6px 9px;
+            border-radius: 999px;
+        }
+
+        @media (min-width: 720px) {
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <h1>Portfolio</h1>
+                <p>
+                    Aquí tienes algunos proyectos con enlaces directos al repositorio (y demo si aplica).
+                    En 30 segundos ves lo que sé hacer.
+                </p>
+            </div>
+
+            <div class="top-actions">
+                <a class="btn" href="index.html">← Volver</a>
+                <!-- CAMBIA TU USUARIO -->
+                <a class="btn" href="https://github.com/TU_USUARIO" target="_blank" rel="noopener">Mi GitHub</a>
+            </div>
+        </header>
+
+        <section class="grid">
+            <!-- PROYECTO 1 -->
+            <article class="card">
+                <h2>Proyecto 1 — React + API</h2>
+                <div class="meta">Frontend · PokeAPI · Filtros · Detalle por ID</div>
+                <p>
+                    Listado, buscador, filtros y página de detalle. Responsive y limpio para enseñar rápido en
+                    entrevistas.
+                </p>
+                <div class="tagrow">
+                    <span class="tag">React</span>
+                    <span class="tag">API</span>
+                    <span class="tag">Router</span>
+                </div>
+                <div class="links">
+                    <a class="link" href="https://github.com/TU_USUARIO/REPO_1" target="_blank"
+                        rel="noopener">Repositorio</a>
+                    <!-- si no tienes demo, borra esta línea -->
+                    <a class="link" href="https://TU_DEMO_1.com" target="_blank" rel="noopener">Demo</a>
+                </div>
+            </article>
+
+            <!-- PROYECTO 2 -->
+            <article class="card">
+                <h2>Proyecto 2 — API REST Java</h2>
+                <div class="meta">Backend · Spring · CRUD · Validaciones</div>
+                <p>
+                    API con endpoints claros, validación, estructura por capas y conexión a base de datos.
+                </p>
+                <div class="tagrow">
+                    <span class="tag">Java</span>
+                    <span class="tag">Spring</span>
+                    <span class="tag">SQL</span>
+                </div>
+                <div class="links">
+                    <a class="link" href="https://github.com/TU_USUARIO/REPO_2" target="_blank"
+                        rel="noopener">Repositorio</a>
+                </div>
+            </article>
+        </section>
+    </div>
+</body>
+
+</html>

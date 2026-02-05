@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diego | DAM & DAW</title>
+    <meta name="description" content="Diego — DAM · DAW | Desarrollador Junior. CV y contacto." />
+
+    <style>
+        :root {
+            --bg0: #020617;
+            --bg1: #0b1226;
+            --card: rgba(2, 6, 23, .62);
+            --stroke: rgba(148, 163, 184, .18);
+            --text: #e2e8f0;
+            --accent: #38bdf8;
+            --shadow: 0 24px 70px rgba(0, 0, 0, .55);
+            --radius: 22px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+            color: var(--text);
+            background:
+                radial-gradient(1200px 800px at 20% 20%, rgba(56, 189, 248, .14), transparent 55%),
+                radial-gradient(900px 700px at 80% 35%, rgba(34, 197, 94, .12), transparent 55%),
+                linear-gradient(135deg, var(--bg1), var(--bg0));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 22px;
+        }
+
+        .wrap {
+            width: min(520px, 100%)
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--stroke);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 34px 28px 26px;
+        }
+
+        h1 {
+            font-size: 2rem
+        }
+
+        .role {
+            margin-top: 6px;
+            color: var(--accent);
+            font-weight: 600
+        }
+
+        .lead {
+            margin-top: 14px;
+            line-height: 1.6
+        }
+
+        /* HABILIDADES */
+        .skills {
+            margin-top: 18px
+        }
+
+        .skills summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 12px;
+            text-align: center;
+            border-radius: 14px;
+            border: 1px solid rgba(148, 163, 184, .22);
+            background: rgba(2, 6, 23, .35);
+            font-weight: 800;
+        }
+
+        .skills summary::-webkit-details-marker {
+            display: none
+        }
+
+        .skills summary::after {
+            content: " ▾";
+            opacity: .8
+        }
+
+        .skills[open] summary::after {
+            content: " ▴"
+        }
+
+        .skills-grid {
+            margin-top: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .chip {
+            padding: 8px 12px;
+            border-radius: 999px;
+            border: 1px solid rgba(148, 163, 184, .22);
+            background: rgba(2, 6, 23, .4);
+            font-size: .85rem;
+        }
+
+        /* BOTONES */
+        .actions {
+            margin-top: 26px;
+            display: grid;
+            gap: 12px
+        }
+
+        .row {
+            display: flex;
+            gap: 12px
+        }
+
+        .btn {
+            flex: 1;
+            padding: 14px;
+            border-radius: 14px;
+            border: 1px solid rgba(148, 163, 184, .22);
+            background: rgba(2, 6, 23, .35);
+            color: var(--text);
+            font-weight: 700;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            transition: .15s;
+        }
+
+        .btn:hover {
+            border-color: var(--accent);
+            transform: translateY(-1px);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, rgba(56, 189, 248, .95), rgba(14, 165, 233, .85));
+            color: #04101a;
+            border: none;
+        }
+
+        /* TOAST */
+        .toast {
+            position: fixed;
+            bottom: 18px;
+            left: 50%;
+            transform: translateX(-50%) translateY(20px);
+            background: rgba(2, 6, 23, .85);
+            border: 1px solid rgba(148, 163, 184, .22);
+            padding: 10px 14px;
+            border-radius: 12px;
+            opacity: 0;
+            transition: .2s;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <main class="wrap">
+        <section class="card">
+            <h1>Diego Mancha Fernández</h1>
+            <div class="role">Desarrollador fullstack junior · DAM / DAW</div>
+
+            <p class="lead">
+                Desarrollo aplicaciones web y backend con mentalidad práctica,
+                código limpio y ganas de aportar desde el primer día.
+            </p>
+
+            <!-- HABILIDADES -->
+            <details class="skills">
+                <summary>Habilidades técnicas y lenguajes que domino</summary>
+                <div class="skills-grid">
+                    <span class="chip">Java</span>
+                    <span class="chip">C#</span>
+                    <span class="chip">Python</span>
+                    <span class="chip">SQL</span>
+                    <span class="chip">JavaScript</span>
+                    <span class="chip">HTML / CSS</span>
+                    <span class="chip">Kotlin</span>
+                    <span class="chip">MongoDB</span>
+                    <span class="chip">Blockchain</span>
+                    <span class="chip">Análisis de vulnerabilidades</span>
+                    <span class="chip">PowerPlatform</span>
+                    <span class="chip">SharePoint</span>
+                    <span class="chip">AWS</span>
+                </div>
+            </details>
+
+            <div class="actions">
+                <!-- CV -->
+                <a class="btn btn-primary" href="cv.html" target="_blank">Ver CV</a>
+
+                <!-- CONTACTO -->
+                <div class="row">
+                    <!-- Opción 1: cliente de correo (si existe) -->
+                    <a class="btn"
+                        href="mailto:diiegomanfee@gmail.com?subject=Contacto%20-%20Landing%20QR&body=Hola%20Diego%2C%0A%0ATe%20he%20visto%20en%20la%20feria%20y%20me%20gustar%C3%ADa%20contactar%20contigo.%0A">
+                        ✉️ Enviar correo
+                    </a>
+
+                    <!-- Opción 2: Gmail web (si mailto no va) -->
+                    <a class="btn"
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=diiegomanfee@gmail.com&su=Contacto%20-%20Landing%20QR&body=Hola%20Diego%2C%0A%0ATe%20he%20visto%20en%20la%20feria%20y%20me%20gustar%C3%ADa%20contactar%20contigo.%0A"
+                        target="_blank" rel="noopener">
+                        📩 Abrir en Gmail
+                    </a>
+                </div>
+
+                <!-- CAMBIA AQUÍ TU NÚMERO -->
+                <a class="btn" href="tel:+34625446283" aria-label="Llamar a Diego Mancha">
+                    📞 Llamar
+                </a>
+            </div>
+
+            <!-- COPIAR EMAIL -->
+            <button class="btn" id="copyBtn">📋 Copiar email</button>
+            </div>
+        </section>
+    </main>
+
+    <div class="toast" id="toast">Email copiado ✅</div>
+
+    <script>
+        const EMAIL = "diiegomanfee@gmail.com";
+        const btn = document.getElementById("copyBtn");
+        const toast = document.getElementById("toast");
+
+        btn.addEventListener("click", async () => {
+            try {
+                await navigator.clipboard.writeText(EMAIL);
+                toast.classList.add("show");
+                setTimeout(() => toast.classList.remove("show"), 1400);
+            } catch {
+                prompt("Copia el email:", EMAIL);
+            }
+        });
+    </script>
+</body>
+
+</html>
